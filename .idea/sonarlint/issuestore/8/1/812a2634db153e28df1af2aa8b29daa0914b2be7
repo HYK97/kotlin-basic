@@ -1,8 +1,0 @@
-
-_kotlin:S6615";Remove this variable, which is assigned but never accessed.(§Ü°©ÿÿÿÿÿ8»ˆèœÙ1
-Jkotlin:S6615"&The value assigned here is never used.(„ú´Àúÿÿÿÿ8»ˆèœÙ1
-Mkotlin:S1481")Remove this unused "test" local variable.(’¹é¨ùÿÿÿÿ8èÿ÷œÙ1
-Lkotlin:S1481"-Remove this unused "testVal4" local variable.(›÷‡ß8èÿ÷œÙ1
-Lkotlin:S1481"-Remove this unused "testVal3" local variable.(•İõø8ë…íœÙ1
-Lkotlin:S1481"-Remove this unused "testVal2" local variable.(ÕÎ”‹8ÿõéœÙ1
-9kotlin:S1128"Remove this unused import.(³¨î©8éÿ÷œÙ1
