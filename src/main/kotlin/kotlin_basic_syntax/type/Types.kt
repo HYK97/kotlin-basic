@@ -1,4 +1,4 @@
-package kotlin_basic_syntax
+package kotlin_basic_syntax.type
 
 /*
 * 기본 타입은 자바와 비슷함

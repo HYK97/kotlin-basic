@@ -1,4 +1,4 @@
-package kotlin_basic_syntax
+package kotlin_basic_syntax.type
 
 /*
 * 비슷한 기능으로 java에 21에도 실험적으로 도입했다.

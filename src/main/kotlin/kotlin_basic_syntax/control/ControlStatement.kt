@@ -1,4 +1,4 @@
-package kotlin_basic_syntax
+package kotlin_basic_syntax.control
 
 fun main() {
     println(expressionIf(30))
