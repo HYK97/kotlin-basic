@@ -1,4 +1,4 @@
-package kotlin_basic_syntax.control.kotlinclass;
+package kotlin_basic_syntax.oop.kotlinclass;
 
 public class JavaPerson {
 	private String name;
