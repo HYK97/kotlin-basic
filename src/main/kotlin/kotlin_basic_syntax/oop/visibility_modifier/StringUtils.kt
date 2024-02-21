@@ -1,6 +1,5 @@
 package kotlin_basic_syntax.oop.visibility_modifier
 
-import com.sun.tools.javac.util.StringUtils
 
 /*
 * 이런식으로 유틸성 메서드는 kt 파일로 만드는게 더유용하다
