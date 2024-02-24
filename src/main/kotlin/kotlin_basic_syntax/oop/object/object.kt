@@ -8,7 +8,7 @@ fun main() {
     /*
     * 코틀린의 익명클래스
     * */
-    moveSomeThing(object : Moveable { // -> new Moveable() { ... }
+    moveSomeThing(object : Movable { // -> new Moveable() { ... }
         override fun move() {
             println("move")
         }
@@ -56,12 +56,12 @@ object Singleton {
     var a: Int = 10
 }
 
-interface Moveable {
+interface Movable {
     fun move()
     fun fly()
 }
 
-private fun moveSomeThing(moveable: Moveable) {
-    moveable.move()
-    moveable.fly()
+private fun moveSomeThing(movable: Movable) {
+    movable.move()
+    movable.fly()
 }
