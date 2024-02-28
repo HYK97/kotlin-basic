@@ -32,10 +32,21 @@ fun main() {
     //isApple2
     filterFruits(fruits,isApple2)
     filterFruits(fruits,{ fruit: Fruit -> fruit.name == "apple" })
+
     //filterFruits 마지막 파라미터가 람다인경우 사용가능
+    //이방법을 추천 it은 호출하는쪽에서 it이 무엇인지 알기 힘들기 때문에
     filterFruits(fruits){ fruit: Fruit -> fruit.name == "apple" }
+
     //람다의 파라미터가 하나인경우
     filterFruits(fruits){ it.name == "apple" }
+
+
+    filterFruits(fruits){
+        println("람다의 파라미터가 하나인경우")
+        //람다는 마지막 값이 리턴값이다.
+        it.name == "apple"
+    }
+
 }
 
 
