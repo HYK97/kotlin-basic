@@ -11,7 +11,8 @@ fun main() {
     val fruits = listOf(
         Fruit(1, "apple", 1000, 1200),
         Fruit(2, "banana", 2000, 2200),
-        Fruit(3, "kiwi", 3000, 3200)
+        Fruit(3, "kiwi", 3000, 3200),
+        Fruit(4, "apple", 1000, 1200)
     )
 
     val apples = fruits.filter { fruit -> fruit.name == "apple" }
@@ -54,13 +55,43 @@ fun main() {
     fruits.lastOrNull()
 
 
-    // => 이름 을 그대로
-    fruits.groupBy { fruit -> fruit.name }
+    // => 이름을 기준으로 그루핑
+    val groupBy: Map<String, List<Fruit>> = fruits.groupBy { fruit -> fruit.name }
+    for (entry in groupBy) {
+        println(entry.key)
+        println(entry.value)
+    }
 
 
     // => id를 기준으로 그룹핑
     //중복되지 않는 키를 기준으로 그룹핑 할 때 좋은 코드이다
-    fruits.associateBy { fruit -> fruit.id }
+    val associateBy: Map<Long, Fruit> = fruits.associateBy { fruit -> fruit.id }
+
+
+    //id를 key로 하고 factoryPrice를 value로 하는 맵을 만든다
+    val idToFactoryPrice: Map<Long, Long> = fruits.associateBy(
+        { fruit -> fruit.id },
+        { fruit -> fruit.factoryPrice }
+    )
+
+    //평탄화
+    val fruitsList = listOf(
+        listOf(Fruit(1, "apple", 1000, 1200), Fruit(2, "banana", 2000, 2200)),
+        listOf(Fruit(3, "kiwi", 3000, 3200), Fruit(4, "apple wang", 1000, 1000))
+    )
+    //하나의 리스트로 평탄화
+    val flattenFruits = fruitsList.flatten()
+
+    println("=====")
+    //출고가와 현재가가 동일한 과일 고르기
+    val flatMap = fruitsList.flatMap { list ->
+        list.filter { fruit ->
+            fruit.factoryPrice == fruit.currentPrice
+        }
+    }
+
+
+    println(flatMap)
 
 
 }
